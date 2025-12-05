@@ -46,7 +46,7 @@ X_test = replace_nan_with_mean(X_test)
 # 4. 构建并训练逻辑回归模型
 #=====================
 
-model = LogisticRegression(max_iter=1000)  # 增加max_iter以确保收敛
+model = LogisticRegression(solver="lbfgs",max_iter=1000)
 model.fit(X_train, y_train)
 
 #=====================
